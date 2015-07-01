@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Microestructura</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+</head>
+<body onload="drawGraph(myGraphLines);">
+	<h1>Calculadora de microestructura en un acero al carbono 1010</h1>
+	<div id="content">
+		<canvas id="graph" width="420px" height="400px" style="border:1px solid black; float:left">Su navegador no tiene soporte para HTML5</canvas>
+		<table float="left" style="font-size:small; background-color:white; color:gray">
+		  <tr>
+		    <th>Algunos grados de enfriamiento</th>
+		  </tr>
+		  <tr>
+		    <td>Aire</td>
+		    <td>5&deg;C/s</td>
+		  </tr>
+		  <tr>
+		    <td>Aceite (no agitado)</td>
+		    <td>18&deg;C/s</td>
+		  </tr>
+		  <tr>
+		    <td>Aceite (agitado)</td>
+		    <td>45&deg;C/s</td>
+		  </tr>
+		  <tr>
+		    <td>Agua (no agitado)</td>
+		    <td>45&deg;C/s</td>
+		  </tr>
+		  <tr>
+		    <td>Agua (agitado)</td>
+		    <td>190&deg;C/s</td>
+		  </tr>
+		  <tr>
+		    <td>Salmuera (no agitado)</td>
+		    <td>90&deg;C/s</td>
+		  </tr>
+		  <tr>
+		    <td>Salmuera (agitado)</td>
+		    <td>230&deg;C/s</td>
+		  </tr>
+		</table>
+		<table id="io" style="table-layout:fixed; clear:both;">
+			<tr>
+				<td>
+					Grado de enfriamiento:
+				</td>
+				<td>
+					<input id="userCoolRate" type="text" oninput="runProgram();" onchange="runProgram();"></input>
+				</td>
+				<td>
+					&deg;C/s
+				</td>
+			</tr>
+			<tr style="color:blue">
+				<td>
+					% martensita:
+				</td>
+				<td id="martensiteOut">
+				</td>
+			</tr>
+			<tr style="color:red">
+				<td>
+					% perlita:
+				</td>
+				<td id="pearliteOut">
+				</td>
+			</tr>
+		</table>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>
